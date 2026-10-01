@@ -1,0 +1,33 @@
+{
+  "attributes": [
+    {
+      "name": "fico",
+      "input": "fico_score",
+      "conditions": [
+        { "id": "F1", "min": 620, "max": 679, "property_tier": ["entry"] },
+        { "id": "F2", "min": 650, "max": 720, "property_tier": ["mid"] },
+        { "id": "F3", "min": 700, "max": 850, "property_tier": ["luxury"] }
+      ]
+    },
+    {
+      "name": "price",
+      "input": "property_price",
+      "isBasePrice": true,
+      "conditions": [
+        { "id": "P1", "min": 200000, "max": 400000, "tier": "entry" },
+        { "id": "P2", "min": 350000, "max": 700000, "tier": "mid" },
+        { "id": "P3", "min": 650000, "max": 1200000, "tier": "luxury" }
+      ]
+    },
+    {
+      "name": "tenure",
+      "input": "tenure_years",
+      "conditions": [
+        { "id": "T1", "min": 0, "max": 2, "fico": "f1", "multiplier": 1.00 },
+        { "id": "T2", "min": 1, "max": 3, "fico": "f1", "multiplier": 0.97 },
+        { "id": "T3", "min": 3, "max": 5, "fico": "f2", "multiplier": 0.95 },
+        { "id": "T4", "min": 4, "max": 20, "fico": "f3", "multiplier": 0.93 }
+      ]
+    }
+  ]
+}
