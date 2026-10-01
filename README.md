@@ -4,8 +4,6 @@ A config-driven engine that, given an applicant's attribute values, finds which 
 conditions match, resolves overlaps, and computes the final discount multiplier and
 discounted price.
 
-See `DESIGN.md` for the full design and the answers to the design questions.
-
 ## Requirements
 
 - Node.js 22+ (runs TypeScript directly, no build step)
